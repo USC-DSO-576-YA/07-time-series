@@ -1,13 +1,12 @@
 # Module 7 — Wildfire time series and dashboard
 
-Work from your **own cleaned California wildfire CSV** saved in Module 6 as
-`outputs/wildfire_clean.csv`. Keep the Module 6 and Module 7 folders beside each
-other in `~/dso576`. The Module 7 notebook reads the file through
-`../06-decompose/outputs/wildfire_clean.csv`; it never edits the Module 6 file.
+The cleaned California wildfire file, `fires_clean.parquet`, is included beside
+the Module 7 notebook. Keep the Module 7 folder in `~/dso576/07-time-series`.
+The notebook reads the bundled file without editing it. It is a copy of the
+Module 6 clean table.
 
-The cleaned table must retain `DISCOVERY_DATE` and `FIRE_SIZE`. If you renamed
-them in Module 6, change the two names in the notebook's loading cell. One row
-must still represent one reported wildfire occurrence.
+The clean table retains `DISCOVERY_DATE` and `FIRE_SIZE`. One row represents one
+reported wildfire occurrence.
 
 1. Run `uv sync --frozen` in this folder and select its `.venv` as the notebook kernel.
 2. Open `module07_wildfire_timeseries.ipynb`. The short example cells show

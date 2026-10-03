@@ -1,5 +1,7 @@
 """Monthly California wildfire dashboard from the Module 7 notebook output."""
 
+from pathlib import Path
+
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -7,7 +9,8 @@ import streamlit as st
 st.title("California wildfire reports over time")
 st.caption("USDA FPA FOD, 1992–2024. Counts are reported records, not all fires.")
 
-monthly = pd.read_csv("outputs/monthly_wildfire.csv", parse_dates=["month"])
+monthly_path = Path(__file__).resolve().parent / "outputs" / "monthly_wildfire.csv"
+monthly = pd.read_csv(monthly_path, parse_dates=["month"])
 required = {"fires", "known_acres", "average_3m", "change", "running"}
 missing = sorted(required.difference(monthly.columns))
 if missing:

@@ -1,0 +1,12 @@
+[project]
+name = "dso576-ya-07-time-series"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas==2.2.3",
+    "ipykernel>=6,<8",
+    "geopandas>=1,<2",
+    "pyogrio>=0.11,<0.14",
+    "plotly>=6,<7",
+    "streamlit>=1.40,<2",
+]
